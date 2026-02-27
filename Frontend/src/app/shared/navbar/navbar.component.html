@@ -1,0 +1,11 @@
+<nav style="background:#1976d2; padding:12px;">
+  <a routerLink="/" style="color:white; font-size:18px; text-decoration:none; margin-right:20px;">
+    Bibliothèque
+  </a>
+  <a routerLink="/create" style="color:white; text-decoration:none;">
+    Ajouter un livre
+  </a>
+  <button *ngIf="auth.isLogged()" (click)="logout()" class="btn btn-danger ">
+    Déconnexion
+  </button>
+</nav>

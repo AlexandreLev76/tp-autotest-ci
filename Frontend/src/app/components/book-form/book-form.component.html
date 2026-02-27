@@ -1,0 +1,14 @@
+<h1>{{ isEdit ? 'Modifier le livre' : 'Ajouter un livre' }}</h1>
+
+<form (ngSubmit)="save()">
+  <label>Titre</label>
+  <input type="text" [(ngModel)]="book.titre" name="titre" required />
+
+  <label>Auteur</label>
+  <input type="text" [(ngModel)]="book.auteur" name="auteur" required />
+
+  <label>Année</label>
+  <input type="number" [(ngModel)]="book.annee" name="annee" required />
+
+  <button class="btn btn-primary" type="submit">Enregistrer</button>
+</form>
